@@ -1,0 +1,29 @@
+body {
+	background: url();
+}
+
+html, body {
+	height: 100%
+}
+
+.info {
+	padding-top: 20px;
+	text-align:center;
+}
+
+#map {
+        height: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+}
+
+@media screen and (max-width: 768px) {
+        .info {
+                display: none;
+        }
+        #map {
+                float: bottom;
+                height: 50%;
+                z-index: -1;
+        }
+    }
