@@ -8,7 +8,10 @@ html, body {
 
 .info {
 	padding-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
 	text-align:center;
+
 }
 
 #map {
