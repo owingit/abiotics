@@ -24,33 +24,6 @@ function getMyLocation() {
         }
 }
 
-// $(document).ready(function() {
-//         mapSelector = document.getElementById("map");
-//         if (navigator.geolocation) {
-//                 navigator.geolocation.getCurrentPosition(function(pos) {
-//                         myLat = pos.coords.latitude;
-//                         myLng = pos.coords.longitude
-//                         centerPin = new google.maps.LatLng(myLat, myLng);
-//                         mapOptions = {
-//                                 zoom: 14,
-//                                 center: centerPin,
-//                                 panControl: true,
-//                                 zoomControl: true,
-//                                 scaleControl: true
-//                         };
-//                         map = new google.maps.Map(mapSelector, mapOptions);
-//                         drawMap();
-//                 })
-//         } else {
-//                 alert("Your browser does not support geolocation!");
-//                 mapOptions = {
-//                         zoom: 0,
-//                         center: new google.maps.LatLng(0, 0)
-//                 };
-//                 map = new google.maps.Map(mapSelector, mapOptions);
-//         }
-// });
-
 function drawMap() {
         map.panTo(centerPin);
         marker = new google.maps.Marker({
@@ -67,7 +40,10 @@ function drawMap() {
         checkButton();
 }
 
-function setMarkersAmp(site, lat, lng, amp, strep) {       
+function setMarkersAmp(site, lat, lng, amp, strep) {   
+        var infocontent = "<p><strong>Site number: </strong>" + site+"</p> " + "<p><strong>Latitude:</strong>" + " " + lat + " </p>" + 
+                          "<p><strong>Longitude: </strong>" + lng + "</p> <p><strong>Ampicillin resistance: </strong>" + amp + 
+                          "</p> <p><strong>Streptomycin resistance: </strong>" + strep + "</p";
         if ((amp >= 0.0) && (amp < 0.20)) {
                 var marker = new google.maps.Marker({
                         map: map,
@@ -76,14 +52,15 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                         icon: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
                 });
                 var infowindow = new google.maps.InfoWindow({
-                        content: "Site number: " + site+" " + "Latitude:" + " " + lat + " " + 
-                                "Longitude: " + lng + " Ampicillin resistance: " + amp + 
-                                " Streptomycin resistance: " + strep
+                        content: infocontent
                 });
                 google.maps.event.addListener(marker, 'click', function() {
                         infowindow.close();
                         infowindow.open(map, marker); 
                 });    
+                google.maps.event.addListener(marker, 'dblclick', function() {
+                        infowindow.close();
+                });
                 marker.setMap(map);
                 return;
         } else if ((amp >=0.20) && (amp < 0.40)) {
@@ -94,14 +71,15 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                         icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
                 });
                 var infowindow = new google.maps.InfoWindow({
-                        content: "Site number: " + site+" " + "Latitude:" + " " + lat + " " + 
-                                "Longitude: " + lng + " Ampicillin resistance: " + amp + 
-                                " Streptomycin resistance: " + strep
+                        content: infocontent
                 });
                 google.maps.event.addListener(marker, 'click', function() {
                         infowindow.close();
-                        infowindow.open(map, marker); 
+                        infowindow.open(map, marker);
                 });    
+                google.maps.event.addListener(marker, 'dblclick', function() {
+                        infowindow.close();
+                });
                 marker.setMap(map);
                 return;
         } else if ((amp >= 0.40) && (amp < 0.60)) {
@@ -112,14 +90,15 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                         icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
                 });
                 var infowindow = new google.maps.InfoWindow({
-                        content: "Site number: " + site+" " + "Latitude:" + " " + lat + " " + 
-                                "Longitude: " + lng + " Ampicillin resistance: " + amp + 
-                                " Streptomycin resistance: " + strep
+                        content: infocontent
                 });
                 google.maps.event.addListener(marker, 'click', function() {
                         infowindow.close();
                         infowindow.open(map, marker); 
-                });    
+                });  
+                google.maps.event.addListener(marker, 'dblclick', function() {
+                        infowindow.close();
+                });  
                 marker.setMap(map);
                 return;
         } else if ((amp >= 0.60) && (amp < 0.80)) {
@@ -130,14 +109,15 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                         icon: "http://maps.google.com/mapfiles/ms/icons/orange-dot.png"
                 });
                 var infowindow = new google.maps.InfoWindow({
-                        content: "Site number: " + site+" " + "Latitude:" + " " + lat + " " + 
-                                "Longitude: " + lng + " Ampicillin resistance: " + amp + 
-                                " Streptomycin resistance: " + strep
+                        content: infocontent
                 });
                 google.maps.event.addListener(marker, 'click', function() {
                         infowindow.close();
                         infowindow.open(map, marker); 
-                });    
+                });   
+                google.maps.event.addListener(marker, 'dblclick', function() {
+                        infowindow.close();
+                }); 
                 marker.setMap(map);
                 return;
         }
@@ -149,14 +129,15 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                         icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
                 });
                 var infowindow = new google.maps.InfoWindow({
-                        content: "Site number: " + site+" " + "Latitude:" + " " + lat + " " + 
-                                "Longitude: " + lng + " Ampicillin resistance: " + amp + 
-                                " Streptomycin resistance: " + strep
+                        content: infocontent
                 });
                 google.maps.event.addListener(marker, 'click', function() {
                         infowindow.close();
                         infowindow.open(map, marker); 
-                });    
+                });   
+                google.maps.event.addListener(marker, 'dblclick', function() {
+                        infowindow.close();
+                }); 
                 marker.setMap(map);
                 return;
         }
