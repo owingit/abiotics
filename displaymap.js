@@ -169,3 +169,11 @@ function checkButton() {
         
 }
 
+function email() {
+        var link = "mailto:andrew-martin-1@colorado.edu"
+             + "&subject=" + escape("Local Antibiotic Resistance")
+             + "&body=" + escape(document.getElementById('emailmessage').value)
+    ;
+
+    window.location.href = link;
+}
