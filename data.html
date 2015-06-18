@@ -26,7 +26,7 @@
 					<li><a href = "index.html">Home</a></li>
 					<li class = "active"><a href = "data.html">Graphics and Information</a></li>
 					<li><a href = "#">The Science</a></li>
-					<li><a href = "#contact">Contact</a></li>
+					<li><a href = "#contact" data-toggle="modal">Contact</a></li>
 				</ul>
 			</div>
 
@@ -152,6 +152,49 @@
 				<div class="modal-body">
 					<p>andrew-martin-1@colorado.edu</p>
 				</div>
+			</div>
+		</div>
+
+	</div>
+
+		<div class = "modal fade" id = "contact" role = "dialog">
+
+		<div class = "modal-dialog">
+			<div class = "modal-content">
+				<form class = "form-horizontal">
+					<div class = "modal-header" style="text-align: center">
+						<h5>Contact Us: </h5>
+					</div>
+					<div class="modal-body">
+						<div class = "form-group">
+
+							<label for = "contact-name" class = "col-lg-2 control-label">Name: </label>
+							<div class = "col-lg-9">
+								<input type = "text" class = "form-control" id = "contact-name" placeholder = "Enter your full name">
+							</div>
+
+						</div>
+						<div class = "form-group">
+
+							<label for = "contact-email" class = "col-lg-2 control-label">Email: </label>
+							<div class = "col-lg-9">
+								<input type = "email" class = "form-control" id = "contact-email" placeholder = "you@example.com">
+							</div>
+
+						</div>
+						<div class = "form-group">
+
+							<label for = "contact-message" class = "col-lg-2 control-label">Message: </label>
+							<div class = "col-lg-9">
+								<textarea class = "form-control" id="emailmessage" rows ="10"></textarea>
+							</div>
+
+						</div>
+					</div>
+					<div class = "modal-footer">
+						<a class = "btn btn-default" data-dismiss = "modal">Close</a>
+						<a class = "btn btn-primary" onclick="email();" data-dismiss = "modal">Send</a>
+				</form>
 			</div>
 		</div>
 
