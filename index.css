@@ -1,0 +1,38 @@
+body {
+	background-color: #fff;
+}
+
+html, body {
+	height: 100%
+}
+
+#bodytext1 {
+	color: #fff;
+	font-size: 2em;
+	font-weight: bold;
+	font-family: Helvetica;
+	text-align: center;
+	text-shadow: 0 1px 0 #ccc, 0 3px 0 #bbb;
+	background: url(https://media2.wnyc.org/i/620/372/c/80/1/antibiotic_resistant_MRSA.jpg); height: auto; width: 100%;
+}
+
+#bodytext2 {
+	font-size: 16px;
+	text-align: center; 
+}
+
+#embellish {
+	color: red;
+	font-weight: bold;
+	font-size: 48px;
+	text-align: center;
+}
+
+#bodytext3 {
+	font-size: 16px;
+}
+
+#footertext {
+	font-size: 12px;
+	font-style: italic;
+}
