@@ -29,7 +29,7 @@ function drawMap() {
         marker = new google.maps.Marker({
                 position: centerPin,
                 title: "You Are Here",
-                icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+                icon: "house.png"
         });
         
         google.maps.event.addListener(marker, "click", function () {
@@ -44,7 +44,7 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
         var infocontent = "<p><strong>Site number: </strong>" + site+"</p> " + "<p><strong>Latitude:</strong>" + " " + lat + " </p>" + 
                           "<p><strong>Longitude: </strong>" + lng + "</p> <p><strong>Ampicillin resistance: </strong>" + amp + 
                           "</p> <p><strong>Streptomycin resistance: </strong>" + strep + "</p";
-        if ((amp >= 0.0) && (amp < 0.20)) {
+        if ((amp >= 0.0) && (amp < 0.165)) {
                 var marker = new google.maps.Marker({
                         map: map,
                         position: new google.maps.LatLng(lat,lng),
@@ -63,7 +63,7 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                 });
                 marker.setMap(map);
                 return;
-        } else if ((amp >=0.20) && (amp < 0.40)) {
+        } else if ((amp >=0.166) && (amp < 0.33)) {
                 var marker = new google.maps.Marker({
                         map: map,
                         position: new google.maps.LatLng(lat,lng),
@@ -82,12 +82,12 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                 });
                 marker.setMap(map);
                 return;
-        } else if ((amp >= 0.40) && (amp < 0.60)) {
+        } else if ((amp >= 0.33) && (amp < 0.50)) {
                 var marker = new google.maps.Marker({
                         map: map,
                         position: new google.maps.LatLng(lat,lng),
                         title: "Site " + site,
-                        icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+                        icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
                 });
                 var infowindow = new google.maps.InfoWindow({
                         content: infocontent
@@ -101,7 +101,28 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                 });  
                 marker.setMap(map);
                 return;
-        } else if ((amp >= 0.60) && (amp < 0.80)) {
+        } else if ((amp >= 0.50) && (amp < 0.666)) {
+                var marker = new google.maps.Marker({
+                        map: map,
+                        position: new google.maps.LatLng(lat,lng),
+                        title: "Site " + site,
+                        icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+                });
+                var infowindow = new google.maps.InfoWindow({
+                        content: infocontent
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.close();
+                        infowindow.open(map, marker); 
+                });   
+                google.maps.event.addListener(marker, 'dblclick', function() {
+                        infowindow.close();
+                }); 
+                marker.setMap(map);
+                return;
+        }
+
+        else if ((amp >= 0.666) && (amp < 0.83)) {
                 var marker = new google.maps.Marker({
                         map: map,
                         position: new google.maps.LatLng(lat,lng),

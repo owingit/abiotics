@@ -38,10 +38,23 @@
 		</div>
 	</div>
 	<div class="info">
-		<p>The map below shows known hotspots of antibiotic resistant bacteria in the wild. Your current location is marked in green, and the other colors represent a spectrum in varying levels of resistance (purple = <strong>low resistance</strong>, red = <strong>high resistance</strong>). <small><em>Click/double click on a marker to open/close an information window displaying detailed resistance levels and location.</em></small> </p>
+		<p>The map below shows known hotspots of antibiotic resistant bacteria in the wild. Click/double click on a marker to open/close an information window displaying detailed resistance levels and location.</p>
 	</div>
-	<div id="map"></div>
+	<div class = "col-sm-1" id = "text_box">
 
+		<ul class="list-group" id = "key">
+  			<li class="list-group-item"><img src = "http://maps.google.com/mapfiles/ms/icons/purple-dot.png" alt = "pdot">Zero - 0.166% ampicillin resistance</li></li>
+  			<li class="list-group-item"><img src = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt = "bdot">0.166 - 0.33% ampicillin resistance</li></li>
+  			<li class="list-group-item"><img src = "http://maps.google.com/mapfiles/ms/icons/green-dot.png" alt = "ydot">0.33 to 0.50% ampicillin resistance</li></li>
+  			<li class="list-group-item"><img src = "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt = "gdot">0.50 to 0.66% ampicillin resistance</li></li>
+  			<li class="list-group-item"><img src = "http://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt = "odot">0.66 to 0.83% ampicillin resistance</li></li>
+  			<li class="list-group-item"><img src = "http://maps.google.com/mapfiles/ms/icons/red-dot.png" alt = "reddot">Above 0.83% ampicillin resistance</li>
+  			<li class="list-group-item"><img src = "house.png" alt = "house">You are here</li>
+		</ul>
+
+	</div>
+
+	<div id="map"></div>
 
 	<div class = "modal fade" id = "contact" role = "dialog">
 

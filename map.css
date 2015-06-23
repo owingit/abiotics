@@ -31,3 +31,12 @@ html, body {
         }
 }
 
+#text_box {
+    font-size: 9px;
+    float: left;
+    width: 20%;
+}
+
+#key {
+    width: auto;
+}
