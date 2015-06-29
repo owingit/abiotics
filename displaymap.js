@@ -44,7 +44,7 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
         var infocontent = "<p><strong>Site number: </strong>" + site+"</p> " + "<p><strong>Latitude:</strong>" + " " + lat + " </p>" + 
                           "<p><strong>Longitude: </strong>" + lng + "</p> <p><strong>Ampicillin resistance: </strong>" + amp + 
                           "</p> <p><strong>Streptomycin resistance: </strong>" + strep + "</p";
-        if ((amp >= 0.0) && (amp < 0.165)) {
+        if ((amp > 0.0) && (amp < 0.165)) {
                 var marker = new google.maps.Marker({
                         map: map,
                         position: new google.maps.LatLng(lat,lng),
@@ -121,7 +121,6 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                 marker.setMap(map);
                 return;
         }
-
         else if ((amp >= 0.666) && (amp < 0.83)) {
                 var marker = new google.maps.Marker({
                         map: map,
@@ -139,6 +138,25 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                 google.maps.event.addListener(marker, 'dblclick', function() {
                         infowindow.close();
                 }); 
+                marker.setMap(map);
+                return;
+        } else if (amp = 0.0) {
+                var marker = new google.maps.Marker({
+                        map: map,
+                        position: new google.maps.LatLng(lat,lng),
+                        title: "Site " + site,
+                        icon: "clean_water.png"
+                });
+                var infowindow = new google.maps.InfoWindow({
+                        content: infocontent
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.close();
+                        infowindow.open(map, marker); 
+                });    
+                google.maps.event.addListener(marker, 'dblclick', function() {
+                        infowindow.close();
+                });
                 marker.setMap(map);
                 return;
         }
