@@ -23,6 +23,19 @@ img11 = new Image ()
 img11.src = "images/Site_20_Ab-.png" 
 img12 = new Image ()
 img12.src = "images/Site_20_Amp.png"
+img13 = new Image ()
+img13.src = "images/Site_31_Ab-.png"
+img14 = new Image ()
+img14.src = "images/Site_31_Amp.png"
+img15 = new Image ()
+img15.src = "images/Site_32_Ab-.png"
+img16 = new Image ()
+img16.src = "images/Site_32_Amp.png"
+img17 = new Image ()
+img17.src = "images/Site_33_Ab-.png"
+img18 = new Image ()
+img18.src = "images/Site_33_Amp.png"
+
 
 
 text1 = "Site 13, no ab"
@@ -37,11 +50,17 @@ text9 = "Site 18, no ab"
 text10 = "Site 18, ab"
 text11 = "Site 20, no ab"
 text12 = "Site 20, ab"
+text13 = "Site 31, no ab"
+text14 = "Site 31, ab"
+text15 = "Site 32, no ab"
+text16 = "Site 32, ab"
+text17 = "Site 33, no ab"
+text18 = "Site 33, ab"
 
 function slideshowUp()
 {
 num=num+1
-if (num==13)
+if (num==19)
 {num=1}
 document.mypic.src=eval("img"+num+".src")
 document.slideshow.show.value=eval("text"+num)
@@ -51,7 +70,7 @@ function slideshowBack()
 {
 num=num-1
 if (num==0)
-{num=12}
+{num=18}
 document.mypic.src=eval("img"+num+".src")
 document.slideshow.show.value=eval("text"+num)
 }
