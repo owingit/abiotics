@@ -1,6 +1,6 @@
 var centerPin, map, myLat, myLng, location;
 var mapOptions = {
-        zoom: 10,
+        zoom: 7,
         center: centerPin,
         panControl: true,
         zoomControl: true,
