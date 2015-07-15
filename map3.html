@@ -3,18 +3,18 @@
 <html>
 <head>
 	<meta charset='utf-8'/>
-	<title>Civilian Science: Local Antibiotic Resistance</title>
+	<title>Worldwide Antibiotic Resistance</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 	<!--mobile-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,map,marker"></script>
-	<script type="text/javascript" src="displaymap.js"></script>
+	<script type="text/javascript" src="displaymap3.js"></script>
 	<script type="text/javascript" src="bootstrap/dist/js/bootstrap.js"></script>
 	<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="index.css" type="text/css" rel="stylesheet"/>
+	<link href="map.css" type="text/css" rel="stylesheet"/>
 </head>
 
-<body>
+<body onload="init()">
 	<div class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
 			<a href ="index.html" class="navbar-brand">Local Antibiotic Resistance</a>
@@ -27,7 +27,7 @@
 
 			<div class="collapse navbar-collapse navHeaderCollapse">
 				<ul class = "nav navbar-nav navbar-right">
-					<li class = "active"><a href ="index.html">Home</a></li>
+					<li><a href ="index.html">Home</a></li>
 					<li class = "dropdown"><a href = "map.html" class = "dropdown-toggle" data-toggle = "dropdown">Map <b class = "caret"></b></a>
 						<ul class = "dropdown-menu">
 							<li><a href = "map.html">Ampicillin</a></li>
@@ -44,29 +44,23 @@
 
 		</div>
 	</div>
-
-	<div class = "container">
-
-
-		<div id = "bodytext1">Antibiotic resistant bacteria can pose health risks. Despite this fact, whether antibiotic resistant bacteria are present in the environment is largely unknown. </div>
-
-
-		<div id = "bodytext2">When a high school student at Fairview HS in Boulder, Colorado, looked for antibiotic resistant bacteria while doing a science project, he discovered that antibiotic resistant bacteria were everywhere. 
-
-		As we use more and more antibiotics, the frequency of antibiotic resistant bacteria increases and can pose an increasing threat to our collective health and well being. 
-		</div>
-		<hr>
-		<div id ="embellish">Where are antibiotic resistant bacteria? Are there resistant bacteria in your community? In your water? In your yard?</div>
-		<hr>
-		<div id="bodytext3">This is a citizen science project aimed at documenting the presence or absence of antibiotic resistant bacteria in watersheds. Our focus thus far has been in aquatic communities of the Front Range near Boulder Colorado. 
-
-		We are hoping to get a broader look.
-
-		Please join us in looking in our waterways for antibiotic resistant bacteria so that we can better know the world we live in and how the use of antibiotics in <a href = "http://www.ncbi.nlm.nih.gov/pubmed/23851089" target = "_blank">agricultural settings</a> and in <a href = "http://www.ncbi.nlm.nih.gov/pubmed/22752336" target = "_blank">our households</a> influences the ecological community we live in. </div>
-
-		<div id = "footertext">
-		Click the <strong>'Map'</strong> tab to view an up-to-date map of identified antibiotic resistance hotspots (currently encompassing Boulder, CO and Fort Collins, CO). Click <strong>'Graphics and Information'</strong> for background research and data, including charts from the literature and a downloadable spreadsheet with our own findings attached. <strong>Photos</strong> has a sampling of photographs comparing plates that have bacteria growth with and without antibiotics present, so you can see the coverage for yourself. <strong>'The Science'</strong> redirects to a detailed methods page so you can recreate our experiments on your own, and then click <strong>'Contact'</strong> to send us your findings! </div>
+	<div class="info">
+		<p>Antibiotic resistance is not simply a problem for the United States. Our researchers have found evidence of high levels of antibiotic resistance <strong>worldwide</strong> and compiled some of the information in a third map, seen below. The boxes on the left match the location to the article's abstracts.</p>
 	</div>
+	<div class = "col-sm-1" id = "text_box">
+
+		<ul class="list-group" id = "key">
+			<li class ="list-group-item"><img src = "http://maps.google.com/mapfiles/ms/icons/purple-dot.png" alt = "pdot"><a href = "http://www.sciencedirect.com/science/article/pii/S1075996414001553" target = "_blank">Antibiotic Resistance in South Africa</a></li>
+  			<li class="list-group-item"><img src = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt = "bdot"><a href = "http://www.nytimes.com/2014/12/04/world/asia/superbugs-kill-indias-babies-and-pose-an-overseas-threat.html?_r=0" target = "_blank">Antibiotic resistance in India</a></li></li>
+  			<li class="list-group-item"><img src = "http://maps.google.com/mapfiles/ms/icons/green-dot.png" alt = "gdot"><a href = "http://link.springer.com/article/10.1007/s11356-015-4636-y" target = "_blank">Antibiotic Resistance in Jiangsu Province, China</a></li></li>
+  			<li class="list-group-item"><img src = "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt = "ydot"><a href = "http://online.liebertpub.com/doi/abs/10.1089/mdr.1997.3.263" target = "_blank">Antibiotic Resistance in Britain</a></li></li>
+  			<li class="list-group-item"><img src = "http://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt = "odot"><a href = "http://sjp.sagepub.com/content/43/3/302.short" target = "_blank">Antibiotic Resistance in Stockholm, Sweden</a></li>
+  			<li class="list-group-item"><img src = "http://maps.google.com/mapfiles/ms/icons/red-dot.png" alt = "rdot"><a href = "http://www.ncbi.nlm.nih.gov/pubmed/14514147" target = "_blank">Antibiotic Resistance in Växjö, Sweden</a></li>
+		</ul>
+
+	</div>
+
+	<div id="map"></div>
 
 	<div class = "modal fade" id = "contact" role = "dialog">
 
