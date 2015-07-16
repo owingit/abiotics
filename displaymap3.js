@@ -78,8 +78,16 @@ function checkButton() {
        setMarkersWorld(4, 33.565911, 119.338151, "http://link.springer.com/article/10.1007/s11356-015-4636-y", "_blank");
        setMarkersWorld(5, 20.926216, 77.768269, "http://www.nytimes.com/2014/12/04/world/asia/superbugs-kill-indias-babies-and-pose-an-overseas-threat.html?_r=0", "_blank");
        setMarkersWorld(6, -33.941448, 18.461783, "http://www.sciencedirect.com/science/article/pii/S1075996414001553", "_blank");
-
-        
+       setMarkersWorld(7, 29.380702, 47.977937, "http://www.biomedcentral.com/content/pdf/1744-8603-2-6.pdf", "_blank");
+       setMarkersWorld(8, 31.146809, 121.605842, "http://www.biomedcentral.com/content/pdf/1744-8603-2-6.pdf", "_blank")
+       setMarkersWorld(9, 40.707477, -73.879431, "http://www.biomedcentral.com/content/pdf/1744-8603-2-6.pdf", "_blank")
+       setMarkersWorld(10, 52.808134, -2.036394, "http://s.telegraph.co.uk/graphics/projects/antibiotic-resistance/", "_blank");
+       setMarkersWorld(11, 38.992997, -76.922314, "http://aem.asm.org/content/70/10/6005.short", "_blank");
+       setMarkersWorld(12, 59.910383, 10.784430, "http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=66683&fileId=S095026880000488X", "_blank");
+       setMarkersWorld(13, 46.456165, -94.749792, "http://www.nejm.org/doi/full/10.1056/nejm199905203402001", "_blank");
+       setMarkersWorld(14, 60.576683, 24.880732, "http://aac.asm.org/content/35/10/2065.short", "_blank");
+       setMarkersWorld(15, 48.983788, 14.475441, "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4448040/", "_blank");
+       
 }
 
 function email() {
