@@ -40,125 +40,28 @@ function drawMap() {
         checkButton();
 }
 
-function setMarkersWorld(site, lat, lng) {   
+function setMarkersWorld(site, lat, lng, link, target) {   
         var infocontent = "<p><strong>Site number: </strong>" + site+"</p> " + "<p><strong>Latitude:</strong>" + " " + lat + " </p>" + 
-                          "<p><strong>Longitude: </strong>" + lng + "</p>";
-            
-        if ((site == 1)) {
-            var marker = new google.maps.Marker({
-                map: map,
-                position: new google.maps.LatLng(lat,lng),
-                title: "Site " + site,
-                icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
-            });
-            var infowindow = new google.maps.InfoWindow({
-                    content: infocontent
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.close();
-                    infowindow.open(map, marker); 
-            });    
-            google.maps.event.addListener(marker, 'dblclick', function() {
-                    infowindow.close();
-            });
-            marker.setMap(map);
-            return;
-        } else if ((site == 2)) {
-            var marker = new google.maps.Marker({
-                map: map,
-                position: new google.maps.LatLng(lat,lng),
-                title: "Site " + site,
-                icon: "http://maps.google.com/mapfiles/ms/icons/orange-dot.png"
-            });
-            var infowindow = new google.maps.InfoWindow({
-                    content: infocontent
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.close();
-                    infowindow.open(map, marker); 
-            });    
-            google.maps.event.addListener(marker, 'dblclick', function() {
-                    infowindow.close();
-            });
-            marker.setMap(map);
-            return;
-        } else if ((site == 3)) {
-            var marker = new google.maps.Marker({
-                map: map,
-                position: new google.maps.LatLng(lat,lng),
-                title: "Site " + site,
-                icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
-            });
-            var infowindow = new google.maps.InfoWindow({
-                    content: infocontent
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.close();
-                    infowindow.open(map, marker); 
-            });    
-            google.maps.event.addListener(marker, 'dblclick', function() {
-                    infowindow.close();
-            });
-            marker.setMap(map);
-            return;
-        } else if ((site == 4)){
-            var marker = new google.maps.Marker({
-                map: map,
-                position: new google.maps.LatLng(lat,lng),
-                title: "Site " + site,
-                icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
-            });
-            var infowindow = new google.maps.InfoWindow({
-                    content: infocontent
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.close();
-                    infowindow.open(map, marker); 
-            });    
-            google.maps.event.addListener(marker, 'dblclick', function() {
-                    infowindow.close();
-            });
-            marker.setMap(map);
-            return;
-        } else if ((site == 5)){
-            var marker = new google.maps.Marker({
-                map: map,
-                position: new google.maps.LatLng(lat,lng),
-                title: "Site " + site,
-                icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-            });
-            var infowindow = new google.maps.InfoWindow({
-                    content: infocontent
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.close();
-                    infowindow.open(map, marker); 
-            });    
-            google.maps.event.addListener(marker, 'dblclick', function() {
-                    infowindow.close();
-            });
-            marker.setMap(map);
-            return;
-        } else {
-            var marker = new google.maps.Marker({
-                map: map,
-                position: new google.maps.LatLng(lat,lng),
-                title: "Site " + site,
-                icon: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png"
-            });
-            var infowindow = new google.maps.InfoWindow({
-                    content: infocontent
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.close();
-                    infowindow.open(map, marker); 
-            });    
-            google.maps.event.addListener(marker, 'dblclick', function() {
-                    infowindow.close();
-            });
-            marker.setMap(map);
-            return;
-        }
+                          "<p><strong>Longitude: </strong>" + lng + "</p><p>" + "<a href = " + link + " target = " + target + "><strong>Article</strong></a></p>";
+        
+        var marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(lat,lng),
+            title: "Site " + site,
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+        });
+        var infowindow = new google.maps.InfoWindow({
+                content: infocontent
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+                infowindow.close();
+                infowindow.open(map, marker); 
+        });    
+        google.maps.event.addListener(marker, 'dblclick', function() {
+                infowindow.close();
+        });
+        marker.setMap(map);
+        return;
 }
 
 
@@ -169,12 +72,12 @@ function checkButton() {
         // setMarkers(location_list[i].site, location_list[i].lat, 
         //         location_list[i].lng, location_list[i].amp, 
         //         location_list[i].strep);
-       setMarkersWorld(1, 56.879317, 14.814398);
-       setMarkersWorld(2, 59.328933, 18.024122);
-       setMarkersWorld(3, 53.131879, -1.778736);
-       setMarkersWorld(4, 33.565911, 119.338151);
-       setMarkersWorld(5, 20.926216, 77.768269);
-       setMarkersWorld(6, -33.941448, 18.461783);
+       setMarkersWorld(1, 56.879317, 14.814398, "http://www.ncbi.nlm.nih.gov/pubmed/14514147", "_blank");
+       setMarkersWorld(2, 59.328933, 18.024122, "http://sjp.sagepub.com/content/43/3/302.short", "_blank");
+       setMarkersWorld(3, 53.131879, -1.778736, "http://online.liebertpub.com/doi/abs/10.1089/mdr.1997.3.263", "_blank");
+       setMarkersWorld(4, 33.565911, 119.338151, "http://link.springer.com/article/10.1007/s11356-015-4636-y", "_blank");
+       setMarkersWorld(5, 20.926216, 77.768269, "http://www.nytimes.com/2014/12/04/world/asia/superbugs-kill-indias-babies-and-pose-an-overseas-threat.html?_r=0", "_blank");
+       setMarkersWorld(6, -33.941448, 18.461783, "http://www.sciencedirect.com/science/article/pii/S1075996414001553", "_blank");
 
         
 }
