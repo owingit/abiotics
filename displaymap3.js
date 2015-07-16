@@ -87,7 +87,12 @@ function checkButton() {
        setMarkersWorld(13, 46.456165, -94.749792, "http://www.nejm.org/doi/full/10.1056/nejm199905203402001", "_blank");
        setMarkersWorld(14, 60.576683, 24.880732, "http://aac.asm.org/content/35/10/2065.short", "_blank");
        setMarkersWorld(15, 48.983788, 14.475441, "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4448040/", "_blank");
-       
+       setMarkersWorld(16, 37.787186, -122.391080, "http://cid.oxfordjournals.org/content/34/4/425.short", "_blank");
+       setMarkersWorld(17, 40.342611, -3.778918, "http://www.jstor.org/stable/4481328?seq=1#page_scan_tab_contents", "_blank");
+       setMarkersWorld(18, 6.246495, -75.576136, "http://aac.asm.org/content/50/8/2880.short", "_blank");
+       setMarkersWorld(19, 53.438593, -113.506048, "http://www.ncbi.nlm.nih.gov/pubmed/19958100", "_blank");
+       setMarkersWorld(20, 33.575699, -101.882950, "http://ehp.niehs.nih.gov/1408555/?utm_medium=twitter&utm_source=twitterfeed", "_blank");
+       setMarkersWorld(21, 39.726326, -104.982141, "http://www.nrcresearchpress.com/doi/abs/10.1139/w10-060#.VagMtFbYkds", "_blank");
 }
 
 function email() {
