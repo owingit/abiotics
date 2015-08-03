@@ -147,7 +147,7 @@ function checkButton() {
         setMarkersWorld(71, 36.580981, 137.571721, "http://onlinelibrary.wiley.com/doi/10.1111/1758-2229.12011/full", "_blank");
         setMarkersWorld(72, -46.571421, -73.726216, "http://onlinelibrary.wiley.com/doi/10.1111/1758-2229.12011/full", "_blank");
         setMarkersWorld(73, 46.367575, 3.076746, "http://www.sciencedirect.com/science/article/pii/S0140673605791662", "_blank");
-        setMarkersWorld(74, -20.114169, -49.357260, "http://www.sciencedirect.com/science/article/pii/S1473309901000913", "_blank");
+        setMarkersWorld(74, -20.114169, -49.357260, "http://www.sciencedirect.com/science/article/pii/S1473309901000913", "_blank");    
 
 
 
