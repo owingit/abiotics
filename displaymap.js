@@ -49,7 +49,7 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                         map: map,
                         position: new google.maps.LatLng(lat,lng),
                         title: "Site " + site,
-                        icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+                        icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
                 });
                 var infowindow = new google.maps.InfoWindow({
                         content: infocontent
@@ -68,7 +68,7 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                         map: map,
                         position: new google.maps.LatLng(lat,lng),
                         title: "Site " + site,
-                        icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+                        icon: "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
                 });
                 var infowindow = new google.maps.InfoWindow({
                         content: infocontent
@@ -87,7 +87,7 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                         map: map,
                         position: new google.maps.LatLng(lat,lng),
                         title: "Site " + site,
-                        icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+                        icon: "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
                 });
                 var infowindow = new google.maps.InfoWindow({
                         content: infocontent
@@ -106,7 +106,7 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                         map: map,
                         position: new google.maps.LatLng(lat,lng),
                         title: "Site " + site,
-                        icon: "http://maps.google.com/mapfiles/ms/icons/orange-dot.png"
+                        icon: "https://maps.google.com/mapfiles/ms/icons/orange-dot.png"
                 });
                 var infowindow = new google.maps.InfoWindow({
                         content: infocontent
@@ -126,7 +126,7 @@ function setMarkersAmp(site, lat, lng, amp, strep) {
                         map: map,
                         position: new google.maps.LatLng(lat,lng),
                         title: "Site " + site,
-                        icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+                        icon: "https://maps.google.com/mapfiles/ms/icons/red-dot.png"
                 });
                 var infowindow = new google.maps.InfoWindow({
                         content: infocontent
